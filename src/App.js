@@ -5,10 +5,10 @@ import TodoList from "./Components/TodoList";
 
 function App() {
   const [task, setTask] = useState("");
-  const changeHandler = (e) => {
+  const changeHandler = e => {
     setTask(e.target.value);
   };
-  const submitHandeler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
     //console.log(task)
     const newTodos = [...todos, task];
@@ -28,7 +28,7 @@ function App() {
           <h1>MY Goals</h1>
         </div>
 
-        <form onSubmit={submitHandeler}>
+        <form onSubmit={submitHandler}>
           <input
             type="text"
             placeholder="Enter a goal..."
